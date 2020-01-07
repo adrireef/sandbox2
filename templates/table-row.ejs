@@ -1,0 +1,15 @@
+<tr>                  
+    <td>
+        <%= obj["Name"] %>
+    </td>                  
+    <td>
+        <%= formatAddress(obj) %><br />
+        (<a href='http://maps.google.com/?q=<%= formatAddress(obj) %>' target='_blank'>Get directions</a>)
+    </td> 
+    <td>
+        <%= obj["Location"] %>
+    </td>                 
+    <td>
+        <%= obj["Country"] %>
+    </td>
+</tr>
