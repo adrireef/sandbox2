@@ -269,13 +269,13 @@ var SearchableMapLib = {
     //filter on location type. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $("#cbType1").is(':checked')) {
-      customFilters.push('r.properties["Type"] === "Natural"');
+      customFilters.push('r.properties["type"] === "Natural reef"');
     }
     if ( $("#cbType2").is(':checked')) {
-      customFilters.push('r.properties["Type"] === "Artificial"');
+      customFilters.push('r.properties["type"] === "Artificial reef"');
     }
     if ( $("#cbType3").is(':checked')) {
-      customFilters.push('r.properties["Type"] === "Wrecks"');
+      customFilters.push('r.properties["type"] === "Wreck"');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
@@ -331,7 +331,7 @@ var SearchableMapLib = {
 
     SearchableMapLib.currentResultsLayer = L.geoJSON(SearchableMapLib.currentResults, {
         pointToLayer: function (feature, latlng) {
-          return L.marker(latlng, {icon: SearchableMapLib.getIcon(feature.properties["Type"])} );
+          return L.marker(latlng, {icon: SearchableMapLib.getIcon(feature.properties["type"])} );
         },
         onEachFeature: onEachFeature
       }
@@ -402,9 +402,9 @@ var SearchableMapLib = {
 
   // -----custom functions-----
   getIcon: function(type){
-    if (type == "Pharmacy") return redIcon;
-    if (type == "Government") return blueIcon;
-    if (type == "Other") return yellowIcon;
+    if (type == "Natural reef") return redIcon;
+    if (type == "Artificial reef") return blueIcon;
+    if (type == "Wreck") return yellowIcon;
     return greenIcon;
   },
   // -----end custom functions-----
