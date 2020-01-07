@@ -262,6 +262,7 @@ var SearchableMapLib = {
         }
     }
 
+ 
     //-----custom filters-----
 
     //-----facility type filter-----
