@@ -8,8 +8,8 @@ $(window).resize(function () {
 $(function() {
 
   SearchableMapLib.initialize({
-    filePath: 'data/adrireef_data2.geojson',
-    fileType: 'geojson',
+    filePath: 'data/adrireef_data2.csv',
+    fileType: 'csv',
     recordName: 'reef',
     recordNamePlural: 'reefs',
     map_centroid: [42.669263,13.8859923],
