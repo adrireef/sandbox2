@@ -1,0 +1,25 @@
+<h4>
+    <%= obj["Name"] %>
+</h4>             
+<p>
+    <%= formatAddress(obj) %><br />
+    <%= obj["Location"] %><br />
+
+    <% if (obj["URL"]) { %>
+        <a href='<%= obj["country"] %>' target='_blank'>Website</a>
+    <% } %>
+</p>
+
+<% if (obj["Region"]) { %>
+    <p>
+        <strong>Cost</strong><br />
+        <%= obj["Region"] %>
+    </p>
+<% } %>
+
+<% if (obj["Bottom Depth [m]"]) { %>
+    <p>
+        <strong>Hours</strong><br />
+        <%= obj["Bottom Depth [m]"] %>
+    </p>
+<% } %>
