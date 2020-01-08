@@ -8,13 +8,13 @@ $(window).resize(function () {
 $(function() {
 
   SearchableMapLib.initialize({
-    filePath: 'data/chicago-flu-shot-locations-2019.csv',
+    filePath: 'data/adrireef_data2.csv',
     fileType: 'csv',
     recordName: 'reef',
     recordNamePlural: 'reefs',
-    map_centroid: [41.881832, -87.623177],
+    map_centroid: [42.669263,13.8859923],
     defaultZoom:  8,
-    defaultRadius: 1610,
+    defaultRadius: 10000,
     debug: true,
   });
 
