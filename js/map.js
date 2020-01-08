@@ -8,7 +8,7 @@ $(window).resize(function () {
 $(function() {
 
   SearchableMapLib.initialize({
-    filePath: 'data/barriere_reduced.csv',
+    filePath: 'data/chicago-flu-shot-locations-2019.csv',
     fileType: 'csv',
     recordName: 'reef',
     recordNamePlural: 'reefs',
