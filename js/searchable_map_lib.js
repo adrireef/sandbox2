@@ -248,7 +248,10 @@ var SearchableMapLib = {
     var address = $("#search-address").val();
 
     // this is a fun hack to do a deep copy of the GeoJSON data
+    console.log('copio i punti geojson in current results..')
     SearchableMapLib.currentResults = JSON.parse(JSON.stringify(SearchableMapLib.geojsonData));
+    console.log('dovrebbe aver fatto, stampo il risultato:')
+    console.log(SearchableMapLib.currentResults)
 
     if(SearchableMapLib.currentPinpoint != null && address != '') {
         var point = turf.point([SearchableMapLib.currentPinpoint[1], SearchableMapLib.currentPinpoint[0]]);
