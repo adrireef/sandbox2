@@ -13,7 +13,7 @@ $(function() {
     recordName: 'reef',
     recordNamePlural: 'reefs',
     map_centroid: [42.669263,13.8859923],
-    defaultZoom:  8,
+    defaultZoom:  6,
     defaultRadius: 10000,
     debug: true,
   });
