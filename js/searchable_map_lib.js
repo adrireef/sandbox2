@@ -253,7 +253,7 @@ var SearchableMapLib = {
     console.log('dovrebbe aver fatto, stampo il risultato:')
     console.log(SearchableMapLib.currentResults);
     console.log('provo la deep copy con jquery:')
-    var SearchableMapLib.currentResults = $.extend(true, {}, SearchableMapLib.geojsonData);
+    $.extend(true, SearchableMapLib.currentResults, SearchableMapLib.geojsonData);
     console.log('dovrebbe aver fatto, stampo il risultato (2):')
     console.log(SearchableMapLib.currentResults);
 
