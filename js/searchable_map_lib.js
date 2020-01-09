@@ -249,7 +249,7 @@ var SearchableMapLib = {
 
     // this is a fun hack to do a deep copy of the GeoJSON data
     console.log('copio i punti geojson in current results..')
-    SearchableMapLib.currentResults = SearchableMapLib.geojsonData;
+    SearchableMapLib.currentResults = JSON.parse(JSON.stringify(SearchableMapLib.geojsonData));
     console.log('dovrebbe aver fatto, stampo il risultato:')
     console.log(SearchableMapLib.currentResults)
 
