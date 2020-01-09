@@ -286,6 +286,8 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
+    console.log('stampo i punti che trovo')
+    console.log(SearchableMapLib.currentResults.features)
     //-----end facility type filter-----
     
 	//-----facility country filter-----
