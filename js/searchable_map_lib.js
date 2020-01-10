@@ -265,7 +265,7 @@ var SearchableMapLib = {
  
     //-----custom filters-----
 
-    //-----facility type filter-----
+    //-----Reef type filter-----
     //filter on location type. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $("#cbType1").is(':checked')) {
@@ -287,9 +287,9 @@ var SearchableMapLib = {
         return eval(filter);
     });
 
-    //-----end facility type filter-----
+    //-----end Reef type filter-----
     
-	//-----facility country filter-----
+	//-----Reef country filter-----
     //filter on location type. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $("#cbType4").is(':checked')) {
@@ -307,7 +307,15 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
-    //-----end facility country filter-----
+    //-----end Reef country filter-----
+    
+    
+    //-----Reef usage filter-----
+    //filter on location type. constructing a list of OR statements based on what checkboxes are selected
+    var customFilters = [];
+    if ( $("#selected-usage").val()) {
+      customFilters.push('r.properties["exploitation"]:contains'$("#selected-usage").val());
+    }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
@@ -317,7 +325,8 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
-    //-----end facility country filter-----
+    //-----end Reef usage filter-----
+
 
     //-----name search filter-----
     var name_search = $("#search-name").val().replace("'", "\\'");
