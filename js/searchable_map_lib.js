@@ -265,8 +265,8 @@ var SearchableMapLib = {
  
     //-----custom filters-----
 
-    //-----facility type filter-----
-    //filter on location type. constructing a list of OR statements based on what checkboxes are selected
+    //-----Reef type filter-----
+    //filter on Reef type. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $("#cbType1").is(':checked')) {
       customFilters.push('r.properties["type"] === "Natural reef"');
@@ -287,10 +287,10 @@ var SearchableMapLib = {
         return eval(filter);
     });
 
-    //-----end facility type filter-----
+    //-----end Reef type filter-----
     
-	//-----facility country filter-----
-    //filter on location type. constructing a list of OR statements based on what checkboxes are selected
+	//-----Country filter-----
+    //filter on country. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $("#cbType4").is(':checked')) {
       customFilters.push('r.properties["Country"] === "Italy"');
@@ -307,17 +307,7 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
-    //-----end facility country filter-----
-
-    SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
-        var filter = "";
-        for (var i = 0; i < customFilters.length; i++) { 
-          filter += customFilters[i] + " || " 
-        }
-        filter = filter.substring(0, filter.length - 3);
-        return eval(filter);
-    });
-    //-----end facility country filter-----
+    //-----end Country filter-----
 
     //-----name search filter-----
     var name_search = $("#search-name").val().replace("'", "\\'");
@@ -403,10 +393,10 @@ var SearchableMapLib = {
 
   // -----custom functions-----
   getIcon: function(type){
-    if (type == "Natural reef") return redIcon;
+    if (type == "Natural reef") return greenIcon;
     if (type == "Artificial reef") return blueIcon;
-    if (type == "Wreck") return yellowIcon;
-    return greenIcon;
+    if (type == "Wreck") return redIcon;
+    return yellowIcon;
   },
   // -----end custom functions-----
 
