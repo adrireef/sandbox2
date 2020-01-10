@@ -310,7 +310,7 @@ var SearchableMapLib = {
     //-----end Country filter-----
     
     console.log('stampo il valore della variabile usages')
-    console.log($('#usages').options.selectedIndex)
+    console.log($('#usages').options.selectedIndex())
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
