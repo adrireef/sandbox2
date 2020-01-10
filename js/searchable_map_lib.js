@@ -309,6 +309,9 @@ var SearchableMapLib = {
     });
     //-----end Country filter-----
     
+    console.log('stampo il valore della variabile usages')
+    console.log($('#usages'))
+    
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
     //var customFilters = [];
