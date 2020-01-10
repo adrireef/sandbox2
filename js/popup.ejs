@@ -2,7 +2,7 @@
     <%= obj["Name"] %>
 </h4>             
 <p>
-    <%= formatAddress(obj) %><br />
+    <strong>Location : </strong>
     <%= obj["Location"] %><br />
 
     <% if (obj["URL"]) { %>
@@ -12,14 +12,14 @@
 
 <% if (obj["Region"]) { %>
     <p>
-        <strong>Cost</strong><br />
+        <strong>Region : </strong>
         <%= obj["Region"] %>
     </p>
 <% } %>
 
 <% if (obj["Bottom Depth [m]"]) { %>
     <p>
-        <strong>Hours</strong><br />
-        <%= obj["Bottom Depth [m]"] %>
+        <strong>Exploitation : </strong>
+        <%= obj["exploitation"] %>
     </p>
 <% } %>
