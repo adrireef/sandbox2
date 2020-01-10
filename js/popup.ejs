@@ -36,16 +36,118 @@
 </p>
 <% } %>
 
-<% if (obj["Region"]) { %>
-    <p>
-        <strong>Region : </strong>
-        <%= obj["Region"] %>
-    </p>
+<% if (obj["type"] == "Natural reef") { %>
+ <p>
+    <strong>Type : </strong>
+    <%= obj["type"] %><br />
+    <strong>Country : </strong>
+    <%= obj["Country"] %><br />
+    <strong>Region : </strong>
+    <%= obj["Region"] %><br />
+    <strong>Location : </strong>
+    <%= obj["Location"] %><br />
+    <strong>Bottom Depth [m] : </strong>
+    <%= obj["bottom_depth_m"] %><br />
+    <strong>Reef Edge [m] : </strong>
+    <%= obj["reef_edge_m"] %><br />
+    <strong>Min. Dist. From Coastline [km] : </strong>
+    <%= obj["min_dist_km"] %><br />
+    <strong>Surrounding Seabed : </strong>
+    <%= obj["surrounding_seabed"] %><br />
+	<strong>Meadows : </strong>
+    <%= obj["meadows"] %><br />
+    <strong>Reef Typology : </strong>
+    <%= obj["reef_typology"] %><br />
+    <strong>Origin of the Reef : </strong>
+    <%= obj["origin_reef"] %><br />
+    <strong>Exploitation : </strong>
+    <%= obj["exploitation"] %><br />
+    <strong>Possible Exploitation : </strong>
+    <%= obj["possible_exploitation"] %><br />
+    <strong>Biocenosis : </strong>
+    <%= obj["biocenosis"] %><br />
+    <strong>Protected Species : </strong>
+    <%= obj["protected_species"] %><br />
+    <strong>Protected Area : </strong>
+    <%= obj["Protected area"] %><br />
+    <strong>Management Program : </strong>
+    <%= obj["Management_program"] %><br />
+    <strong>Surveillance Service : </strong>
+    <%= obj["Surveillance_service"] %><br />
+    <strong>Monitoring Program : </strong>
+    <%= obj["Monitoring_program"] %><br />
+    <strong>Available Data : </strong>
+    <%= obj["Available data"] %><br />
+    <strong>Available literature (Scientific or Grey) : </strong>
+    <%= obj["Available literature (Scientific or Grey)"] %><br />
+ </p>
 <% } %>
 
-<% if (obj["exploitation"]) { %>
-    <p>
-        <strong>Exploitation : </strong>
-        <%= obj["exploitation"] %>
-    </p>
+<% if (obj["type"] == "Artificial reef") { %>
+ <p>
+    <strong>Type : </strong>
+    <%= obj["type"] %><br />
+    <strong>Country : </strong>
+    <%= obj["Country"] %><br />
+    <strong>Region : </strong>
+    <%= obj["Region"] %><br />
+    <strong>Location : </strong>
+    <%= obj["Location"] %><br />
+    <strong>Year of Deployment : </strong>
+    <%= obj["year_deployment"] %><br />
+    <strong>Bottom Depth [m] : </strong>
+    <%= obj["bottom_depth_m"] %><br />
+    <strong>Min. Dist. From Coastline [km] : </strong>
+    <%= obj["min_dist_km"] %><br />
+    <strong>Surrounding Seabed : </strong>
+    <%= obj["surrounding_seabed"] %><br />
+	<strong>Meadows : </strong>
+    <%= obj["meadows"] %><br />
+    <strong>Reef Typology : </strong>
+    <%= obj["reef_typology"] %><br />
+    <strong>Material : </strong>
+    <%= obj["Material"] %><br />
+    <strong>Arrangement of Modules : </strong>
+    <%= obj["Arrangement_modules"] %><br />
+    <strong>Total Area [sqm] : </strong>
+    <%= obj["total_area_sqm"] %><br />
+    <strong>Total Volume [cum] : </strong>
+    <%= obj["total_volume_cubm"] %><br />
+    <strong>Number of Oasis : </strong>
+    <%= obj["n_oasis"] %><br />
+    <strong>Oasi Surface [sqm] : </strong>
+    <%= obj["dimens_oasi_sqm"] %><br />
+    <strong>Type of Structures : </strong>
+    <%= obj["type_structures"] %><br />
+    <strong>Number of Structures : </strong>
+    <%= obj["n_structures"] %><br />
+    <strong>Structures Dimension [m] : </strong>
+    <%= obj["dim_structures_m"] %><br />
+    <strong>Distance Between Structures [m] : </strong>
+    <%= obj["dist_between_structures_m"] %><br />
+    <strong>Modules Shape : </strong>
+    <%= obj["modules_shape"] %><br />
+    <strong>Number of Modules : </strong>
+    <%= obj["n_modules"] %><br />
+    <strong>Dimension LWH [m] : </strong>
+    <%= obj["dimension_leng_width_heigh_m"] %><br />
+    <strong>Experimental/Professional : </strong>
+    <%= obj["experimental_professional"] %><br />
+    <strong>Scope : </strong>
+    <%= obj["scope"] %><br />    
+    <strong>Exploitation : </strong>
+    <%= obj["exploitation"] %><br />
+    <strong>Possible Exploitation : </strong>
+    <%= obj["possible_exploitation"] %><br />
+    <strong>Concession Area : </strong>
+    <%= obj["Concession_area_Y_N"] %><br />
+    <strong>Surveillance Service : </strong>
+    <%= obj["Surveillance_service"] %><br />
+    <strong>Monitoring Program : </strong>
+    <%= obj["Monitoring_program"] %><br />
+    <strong>Available Data : </strong>
+    <%= obj["Available data"] %><br />
+    <strong>Available literature (Scientific or Grey) : </strong>
+    <%= obj["Available literature (Scientific or Grey)"] %><br />
+ </p>
 <% } %>
