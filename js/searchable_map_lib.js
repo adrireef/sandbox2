@@ -322,7 +322,7 @@ var SearchableMapLib = {
       customFilters.push('r.properties["exploitation"] === "Snorkeling"');
     }
     if ( $('#usages').val() == ['Research','Snorkeling']) {
-      customFilters.push('r.properties["exploitation"] === ("Snorkeling" || "Research")');
+      console.log('entra qui?'));
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
@@ -332,9 +332,11 @@ var SearchableMapLib = {
         }
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
+        
+        console.log('dopo aver selezionato almeno un usage la variabile filter cambia così: ')
+		console.log(filter)
     });
-    console.log('dopo aver selezionato almeno un usage la variabile filter cambia così: ')
-    console.log(filter)
+
     //-----end Usage filter-----
     
     
