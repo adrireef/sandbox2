@@ -313,8 +313,11 @@ var SearchableMapLib = {
     //-----Reef usage filter-----
     //filter on location type. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
-    if ( $("#selected-usage").val()) {
-      customFilters.push('r.properties["possible_exploitation"] === '$("#selected-usage").val()));
+    if ( $("#cbType6").is(':checked')) {
+      customFilters.push('r.properties["Country"] === "Italy"');
+    }
+    if ( $("#cbType7").is(':checked')) {
+      customFilters.push('r.properties["Country"] === "Croatia"');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
