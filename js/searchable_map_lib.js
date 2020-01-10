@@ -314,7 +314,7 @@ var SearchableMapLib = {
     //filter on location type. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $("#selected-usage").val()) {
-      customFilters.push('r.properties["possible_exploitation"]:contains'$("#selected-usage").val());
+      customFilters.push('r.properties["possible_exploitation"]:contains('$("#selected-usage").val()')');
     };
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
