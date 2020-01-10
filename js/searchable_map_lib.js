@@ -311,7 +311,6 @@ var SearchableMapLib = {
     
     console.log('stampo il valore della variabile usages')
     console.log($('#usages').val())
-    console.log(filter)
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
@@ -322,8 +321,8 @@ var SearchableMapLib = {
     if ( $('#usages').val() == 'Snorkeling') {
       customFilters.push('r.properties["exploitation"] === "Snorkeling"');
     }
-    if ( $('#usages').val() == ('Research' && 'Snorkeling')) {
-      customFilters.push('r.properties["exploitation"] === "Snorkeling" && "Research"');
+    if ( $('#usages').val() == ['Research','Snorkeling']) {
+      customFilters.push('r.properties["exploitation"] === ("Snorkeling" || "Research")');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
