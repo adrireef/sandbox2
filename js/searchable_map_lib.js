@@ -313,7 +313,7 @@ var SearchableMapLib = {
     console.log($('#usages').val())
     
     //-----Usage filter-----
-    filter on country. constructing a list of OR statements based on what checkboxes are selected
+    //filter on country. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $('#usages').val() == 'Research') {
       customFilters.push('r.properties["exploitation"] === "Research"');
