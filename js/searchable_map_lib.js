@@ -315,7 +315,7 @@ var SearchableMapLib = {
     var customFilters = [];
     if ( $("#selected-usage").val()) {
       customFilters.push('r.properties["possible_exploitation"]:contains'$("#selected-usage").val());
-    }
+    };
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
