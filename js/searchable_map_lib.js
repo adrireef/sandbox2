@@ -331,10 +331,9 @@ var SearchableMapLib = {
           filter += customFilters[i] + " || " 
         }
         filter = filter.substring(0, filter.length - 3);
-        return eval(filter);
-        
         console.log('dopo aver selezionato almeno un usage la variabile filter cambia così: ')
 		console.log(filter)
+        return eval(filter);
     });
 
     //-----end Usage filter-----
