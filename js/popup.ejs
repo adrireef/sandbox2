@@ -1,11 +1,40 @@
 <h4>
     <%= obj["Name"] %>
-</h4>             
+</h4>   
+<% if (obj["type"] == "Wreck") { %>          
 <p>
+    <strong>Type : </strong>
+    <%= obj["type"] %><br />
+    <strong>Country : </strong>
+    <%= obj["Country"] %><br />
+    <strong>Region : </strong>
+    <%= obj["Region"] %><br />
     <strong>Location : </strong>
     <%= obj["Location"] %><br />
-
+    <strong>Year of Deployment : </strong>
+    <%= obj["year_deployment"] %><br />
+    <strong>Bottom Depth [m] : </strong>
+    <%= obj["bottom_depth_m"] %><br />
+    <strong>Min. Dist. From Coastline [km] : </strong>
+    <%= obj["min_dist_km"] %><br />
+    <strong>Surrounding Seabed : </strong>
+    <%= obj["surrounding_seabed"] %><br />
+    <strong>Reef Typology : </strong>
+    <%= obj["reef_typology"] %><br />
+    <strong>Structure Wreck : </strong>
+    <%= obj["structure_wreck"] %><br />
+    <strong>Dimension LWH [m] : </strong>
+    <%= obj["dimension_leng_width_heigh_m"] %><br />
+    <strong>Weight or Displacement : </strong>
+    <%= obj["weight_or_displacement_tons"] %><br />
+    <strong>Exploitation : </strong>
+    <%= obj["exploitation"] %><br />
+    <strong>Observations : </strong>
+    <%= obj["observations"] %><br />
+    <strong>Available literature (Scientific or Grey) : </strong>
+    <%= obj["Available literature (Scientific or Grey)"] %><br />
 </p>
+<% } %>
 
 <% if (obj["Region"]) { %>
     <p>
