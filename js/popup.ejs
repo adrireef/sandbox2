@@ -5,9 +5,6 @@
     <strong>Location : </strong>
     <%= obj["Location"] %><br />
 
-    <% if (obj["URL"]) { %>
-        <a href='<%= obj["country"] %>' target='_blank'>Website</a>
-    <% } %>
 </p>
 
 <% if (obj["Region"]) { %>
@@ -17,7 +14,7 @@
     </p>
 <% } %>
 
-<% if (obj["Bottom Depth [m]"]) { %>
+<% if (obj["exploitation"]) { %>
     <p>
         <strong>Exploitation : </strong>
         <%= obj["exploitation"] %>
