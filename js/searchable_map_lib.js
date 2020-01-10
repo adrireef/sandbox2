@@ -309,8 +309,10 @@ var SearchableMapLib = {
     });
     //-----end Country filter-----
     
+    var utilizzi = document.getElementById("usages");
+    var risultato = utilizzi.options[utilizzi.selectedIndex].value;
     console.log('stampo il valore della variabile usages')
-    console.log($('#usages'))
+    console.log(risultato)
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
