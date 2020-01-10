@@ -322,7 +322,7 @@ var SearchableMapLib = {
       customFilters.push('r.properties["exploitation"] === "Snorkeling"');
     }
     if ( $('#usages').val() == ['Research','Snorkeling']) {
-      console.log('entra qui?'));
+      console.log('entra qui?');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
