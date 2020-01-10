@@ -311,25 +311,31 @@ var SearchableMapLib = {
     
     console.log('stampo il valore della variabile usages')
     console.log($('#usages').val())
+    console.log(filter)
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
-    //var customFilters = [];
-    //if ( $('#usages').val() == 'Research') {
-      //customFilters.push('r.properties["exploitation"] === "Research"');
-    //}
-    //if ( $('#usages').val() == 'Snorkeling') {
-      //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
-    //}
+    var customFilters = [];
+    if ( $('#usages').val() == 'Research') {
+      customFilters.push('r.properties["exploitation"] === "Research"');
+    }
+    if ( $('#usages').val() == 'Snorkeling') {
+      customFilters.push('r.properties["exploitation"] === "Snorkeling"');
+    }
+    if ( $('#usages').val() == ('Research' && 'Snorkeling')) {
+      customFilters.push('r.properties["exploitation"] === "Snorkeling" && "Research"');
+    }
 
-    //SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
-        //var filter = "";
-        //for (var i = 0; i < customFilters.length; i++) { 
-          //filter += customFilters[i] + " || " 
-        //}
-        //filter = filter.substring(0, filter.length - 3);
-        //return eval(filter);
-    //});
+    SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
+        var filter = "";
+        for (var i = 0; i < customFilters.length; i++) { 
+          filter += customFilters[i] + " || " 
+        }
+        filter = filter.substring(0, filter.length - 3);
+        return eval(filter);
+    });
+    console.log('dopo aver selezionato almeno un usage la variabile filter cambia così: ')
+    console.log(filter)
     //-----end Usage filter-----
     
     
