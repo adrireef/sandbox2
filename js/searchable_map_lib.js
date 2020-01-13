@@ -309,12 +309,8 @@ var SearchableMapLib = {
     });
     //-----end Country filter-----
     
-    console.log('stampo il valore della variabile usages')
-    console.log($('#usages').val())
-    
     //-----Usage filter-----
-    //filter on country. constructing a list of OR statements based on what checkboxes are selected
-    //var customFilters = [];
+    //filter on usage. constructing a list of AND statements based on what lines in the dropdown menu are selected
     if ($('#usages').val() != '') {
 	
 	for (var j = 0; j < $('#usages').val().length; j++) {
@@ -350,37 +346,41 @@ var SearchableMapLib = {
         return eval(filter);
     });
 	}
-	
-	//if ( $('#usages').val() == 'Research') {
-      //customFilters.push('r.properties["exploitation"].match(/Research/g)');
-    //}
-    //if ( $('#usages').val() == 'Professional fishery') {
-      //customFilters.push('r.properties["exploitation"].match(/Professional fishery/g)');
-    //}
-    //if ( $('#usages').val() == 'Snorkeling') {
-	  ////customFilters.push('r.properties["exploitation"] === "Snorkeling"');
-	  //customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
-    //}
-    //if ( $('#usages').val() == 'Diving') {
-      //customFilters.push('r.properties["exploitation"].match(/Diving/g)');
-    //}
-    //if ( $('#usages').val() == 'Recreational fishery') {
-      //customFilters.push('r.properties["exploitation"].match(/Recreational fishery/g)');
-    //}
-
-    //SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
-        //var filter = "";
-        //for (var i = 0; i < customFilters.length; i++) { 
-          //filter += customFilters[i] + " || " 
-        //}
-        //filter = filter.substring(0, filter.length - 3);
-        //return eval(filter);
-    //});
 	}
-    //-----end Usage filter-----
+	//-----end Usage filter-----
     
-    
+    //-----Natural reef typology filter-----
+    //filter on natural reef typology. constructing a list of AND statements based on what lines in the dropdown menu are selected
+    if ($('#typologies').val() != '') {
+	
+	for (var j = 0; j < $('#typologies').val().length; j++) {
+	var customFilters = [];	
+	console.log($('#typologies').val()[j])
+	if ( $('#typologies').val()[j] == 'Patch reef') {
+      customFilters.push('r.properties["exploitation"].match(/Patch reef/g)');
+    }   
+    if ( $('#typologies').val()[j] == 'Ledges') {
+      customFilters.push('r.properties["exploitation"].match(/Ledges/g)');
+    }
+    if ( $('#typologies').val()[j] == 'Low profile reef') {
+	  customFilters.push('r.properties["exploitation"].match(/Low profile reef/g)');
+    }
+    if ( $('#typologies').val()[j] == 'High profile reef') {
+      customFilters.push('r.properties["exploitation"].match(/High profile reef/g)');
+    }
 
+    SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
+        var filter = "";
+        for (var i = 0; i < customFilters.length; i++) { 
+          filter += customFilters[i] + " || " 
+        }
+        filter = filter.substring(0, filter.length - 3);
+        return eval(filter);
+    });
+	}
+	}
+    //-----end Natural reef typology filter-----    
+ 
     //-----name search filter-----
     var name_search = $("#search-name").val().replace("'", "\\'");
     if (name_search != '') {
