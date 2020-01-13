@@ -379,7 +379,36 @@ var SearchableMapLib = {
     });
 	}
 	}
-    //-----end Natural reef typology filter-----    
+    //-----end Natural reef typology filter----- 
+    
+    //-----Artificial reef material filter-----
+    //filter on artificial reef material. constructing a list of AND statements based on what lines in the dropdown menu are selected
+    if ($('#materials').val() != '') {
+	
+	for (var j = 0; j < $('#materials').val().length; j++) {
+	var customFilters = [];	
+	console.log($('#materials').val()[j])
+	if ( $('#materials').val()[j] == 'Steel') {
+      customFilters.push('r.properties["Material"].match(/Steel/g)');
+    }   
+    if ( $('#materials').val()[j] == 'Concrete') {
+      customFilters.push('r.properties["Material"].match(/Concrete/g)');
+    }
+    if ( $('#materials').val()[j] == 'Rocks') {
+	  customFilters.push('r.properties["Material"].match(/Rocks/g)');
+    }
+
+    SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
+        var filter = "";
+        for (var i = 0; i < customFilters.length; i++) { 
+          filter += customFilters[i] + " || " 
+        }
+        filter = filter.substring(0, filter.length - 3);
+        return eval(filter);
+    });
+	}
+	}
+    //-----end Artificial reef material filter-----    
  
     //-----name search filter-----
     var name_search = $("#search-name").val().replace("'", "\\'");
