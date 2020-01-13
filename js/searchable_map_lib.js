@@ -320,6 +320,10 @@ var SearchableMapLib = {
 	  //customFilters.push('r.some(item => item.properties["exploitation"] === "Research")');	
       customFilters.push('r.properties["exploitation"].match(/Research/g)');
     }
+    if ( $('#usages').val() == 'Professional fishery') {
+	  //customFilters.push('r.some(item => item.properties["exploitation"] === "Research")');	
+      customFilters.push('r.properties["exploitation"].match(/Professional fishery/g)');
+    }
     if ( $('#usages').val() == 'Snorkeling') {
 	  //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
 	  customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
