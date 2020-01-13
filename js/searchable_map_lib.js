@@ -318,7 +318,7 @@ var SearchableMapLib = {
     if ($('#usages').val() != '') {
     if ( $('#usages').val() == 'Research') {
 	  //customFilters.push('r.some(item => item.properties["exploitation"] === "Research")');	
-      customFilters.push('r.properties["exploitation"] === "Research"');
+      customFilters.push('r.properties["exploitation"].match(/Research/g)');
     }
     if ( $('#usages').val() == 'Snorkeling') {
 	  customFilters.push('r.properties["exploitation"] === "Snorkeling"');
