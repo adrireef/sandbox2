@@ -315,9 +315,11 @@ var SearchableMapLib = {
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
+    if ($('#usages').val() != '') {
     if ( $('#usages').val() == 'Research') {
-	  customFilters.push('r.some(item => item.exploitation === "Research")');	
-      //customFilters.push('r.properties["exploitation"] === "Research"');
+	  customFilters.log('r')
+	  //customFilters.push('r.some(item => item.properties["exploitation"] === "Research")');	
+      customFilters.push('r.properties["exploitation"] === "Research"');
     }
     if ( $('#usages').val() == 'Snorkeling') {
 	  customFilters.push('r.properties["exploitation"] === "Snorkeling"');
@@ -360,6 +362,7 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
+	}
     //-----end Usage filter-----
     
     
