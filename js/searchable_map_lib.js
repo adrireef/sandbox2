@@ -328,35 +328,12 @@ var SearchableMapLib = {
 	  //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
 	  customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
     }
-    //if ( $('#usages').val() == 'Diving') {
-      //customFilters.push('r.properties["exploitation"] === "Diving"');
-    //}
-    //if ( $('#usages').val() == 'Professional fishery') {
-      //customFilters.push('r.properties["exploitation"] === "Professional fishery"');
-    //}
-    //if ( $('#usages').val() == 'Recreational fishery') {
-      //customFilters.push('r.properties["exploitation"] === "Recreational fishery"');
-    //}
-    //if ( $('#usages').val() == 'Diving/Snorkeling') {
-      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling"');
-    //}
-    //if ( $('#usages').val() == 'Diving/Snorkeling, Professional fishery') {
-      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Professional fishery"');
-    //}
-    //if ( $('#usages').val() == 'Diving/Snorkeling, Professional fishery, Recreational fishery') {
-      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Professional fishery, Recreational fishery"');
-    //}
-    //if ( $('#usages').val() == 'Diving/Snorkeling, Recreational fishery') {
-      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Recreational fishery"');
-    //}
-    //if ( $('#usages').val() == 'Professional fishery') {
-      //customFilters.push('r.properties["exploitation"] === "Professional fishery"');
-    //}
-    //if ( $('#usages').val() == 'Professional fishery, Recreational fishery') {
-      //customFilters.push('r.properties["exploitation"] === "Professional fishery, Recreational fishery"');
-    //}
-    //if ( $('#usages').val() == ['Research','Snorkeling']) {;
-    //}
+    if ( $('#usages').val() == 'Diving') {
+      customFilters.push('r.properties["exploitation"].match(/Diving/g)');
+    }
+    if ( $('#usages').val() == 'Recreational fishery') {
+      customFilters.push('r.properties["exploitation"].match(/Recreational fishery/g)');
+    }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
