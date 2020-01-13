@@ -309,19 +309,28 @@ var SearchableMapLib = {
     });
     //-----end Country filter-----
     
-    console.log('stampo il valore della variabile usages')
-    console.log($('#usages').val())
+    //console.log('stampo il valore della variabile usages')
+    //console.log($('#usages').val())
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
-    if ( $('#cbType6').is(':checked') == 'Research') {
+    if ( $('#cbType6').is(':checked')) {
       customFilters.push('r.properties["exploitation"] === "Research"');
     }
-    if ( $('#cbType7').is(':checked') == 'Research') {
+    if ( $('#cbType7').is(':checked')) {
       customFilters.push('r.properties["exploitation"] === "Snorkeling"');
     }
-    
+    //var customFilters = [];
+    //if ( $('#usages').val() == 'Research') {
+      //customFilters.push('r.properties["exploitation"] === "Research"');
+    //}
+    //if ( $('#usages').val() == 'Snorkeling') {
+      //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
+    //}
+    //if ( $('#usages').val() == ['Research','Snorkeling']) {;
+    //}
+
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
         for (var i = 0; i < customFilters.length; i++) { 
