@@ -317,7 +317,8 @@ var SearchableMapLib = {
     var customFilters = [];
     if ($('#usages').val() != '') {
 	
-	for (i in $('#usages').val()) {
+	for (i in $('#usages').val()) {	
+	console.log(i)
 	if ( i == 'Research') {
       customFilters.push('r.properties["exploitation"].match(/Research/g)');
     }
