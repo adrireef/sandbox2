@@ -316,22 +316,23 @@ var SearchableMapLib = {
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ($('#usages').val() != '') {
-    if ( $('#usages').val() == 'Research') {
-	  //customFilters.push('r.some(item => item.properties["exploitation"] === "Research")');	
+	
+	for (i in $('#usages').val()) {
+	if ( i == 'Research') {
       customFilters.push('r.properties["exploitation"].match(/Research/g)');
     }
-    if ( $('#usages').val() == 'Professional fishery') {
-	  //customFilters.push('r.some(item => item.properties["exploitation"] === "Research")');	
+        
+    if ( i == 'Professional fishery') {
       customFilters.push('r.properties["exploitation"].match(/Professional fishery/g)');
     }
-    if ( $('#usages').val() == 'Snorkeling') {
+    if ( i == 'Snorkeling') {
 	  //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
 	  customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
     }
-    if ( $('#usages').val() == 'Diving') {
+    if ( i == 'Diving') {
       customFilters.push('r.properties["exploitation"].match(/Diving/g)');
     }
-    if ( $('#usages').val() == 'Recreational fishery') {
+    if ( i == 'Recreational fishery') {
       customFilters.push('r.properties["exploitation"].match(/Recreational fishery/g)');
     }
 
@@ -343,6 +344,33 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
+	}
+	
+	//if ( $('#usages').val() == 'Research') {
+      //customFilters.push('r.properties["exploitation"].match(/Research/g)');
+    //}
+    //if ( $('#usages').val() == 'Professional fishery') {
+      //customFilters.push('r.properties["exploitation"].match(/Professional fishery/g)');
+    //}
+    //if ( $('#usages').val() == 'Snorkeling') {
+	  ////customFilters.push('r.properties["exploitation"] === "Snorkeling"');
+	  //customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
+    //}
+    //if ( $('#usages').val() == 'Diving') {
+      //customFilters.push('r.properties["exploitation"].match(/Diving/g)');
+    //}
+    //if ( $('#usages').val() == 'Recreational fishery') {
+      //customFilters.push('r.properties["exploitation"].match(/Recreational fishery/g)');
+    //}
+
+    //SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
+        //var filter = "";
+        //for (var i = 0; i < customFilters.length; i++) { 
+          //filter += customFilters[i] + " || " 
+        //}
+        //filter = filter.substring(0, filter.length - 3);
+        //return eval(filter);
+    //});
 	}
     //-----end Usage filter-----
     
