@@ -327,12 +327,15 @@ var SearchableMapLib = {
     if ( $('#usages').val()[j] == 'Professional fishery') {
       customFilters.push('r.properties["exploitation"].match(/Professional fishery/g)');
     }
-    if ( $('#usages').val()[j] == 'Snorkeling') {
+    if ( $('#usages').val()[j] == 'Mariculture') {
 	  //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
-	  customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
+	  customFilters.push('r.properties["exploitation"].match(/Mariculture/g)');
     }
     if ( $('#usages').val()[j] == 'Diving') {
       customFilters.push('r.properties["exploitation"].match(/Diving/g)');
+    }
+    if ( $('#usages').val()[j] == 'None') {
+      customFilters.push('r.properties["exploitation"].match(/None/g)');
     }
     if ( $('#usages').val()[j] == 'Recreational fishery') {
       customFilters.push('r.properties["exploitation"].match(/Recreational fishery/g)');
