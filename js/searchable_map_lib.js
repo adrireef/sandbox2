@@ -357,16 +357,16 @@ var SearchableMapLib = {
 	var customFilters = [];	
 	console.log($('#typologies').val()[j])
 	if ( $('#typologies').val()[j] == 'Patch reef') {
-      customFilters.push('r.properties["exploitation"].match(/Patch reef/g)');
+      customFilters.push('r.properties["reef_typology"].match(/Patch reef/g)');
     }   
     if ( $('#typologies').val()[j] == 'Ledges') {
-      customFilters.push('r.properties["exploitation"].match(/Ledges/g)');
+      customFilters.push('r.properties["reef_typology"].match(/Ledges/g)');
     }
-    if ( $('#typologies').val()[j] == 'Low profile reef') {
-	  customFilters.push('r.properties["exploitation"].match(/Low profile reef/g)');
+    if ( $('#typologies').val()[j] == 'Low') {
+	  customFilters.push('r.properties["reef_typology"].match(/Low/g)');
     }
-    if ( $('#typologies').val()[j] == 'High profile reef') {
-      customFilters.push('r.properties["exploitation"].match(/High profile reef/g)');
+    if ( $('#typologies').val()[j] == 'High') {
+      customFilters.push('r.properties["reef_typology"].match(/High/g)');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
