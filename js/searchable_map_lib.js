@@ -309,8 +309,8 @@ var SearchableMapLib = {
     });
     //-----end Country filter-----
     
-    //console.log('stampo il valore della variabile usages')
-    //console.log($('#usages').val())
+    console.log('stampo il valore della variabile usages')
+    console.log($('#usages').val())
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
@@ -321,33 +321,33 @@ var SearchableMapLib = {
     if ( $('#usages').val() == 'Snorkeling') {
       customFilters.push('r.properties["exploitation"] === "Snorkeling"');
     }
-    if ( $('#usages').val() == 'Diving') {
-      customFilters.push('r.properties["exploitation"] === "Diving"');
-    }
-    if ( $('#usages').val() == 'Professional fishery') {
-      customFilters.push('r.properties["exploitation"] === "Professional fishery"');
-    }
-    if ( $('#usages').val() == 'Recreational fishery') {
-      customFilters.push('r.properties["exploitation"] === "Recreational fishery"');
-    }
-    if ( $('#usages').val() == 'Diving/Snorkeling') {
-      customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling"');
-    }
-    if ( $('#usages').val() == 'Diving/Snorkeling, Professional fishery') {
-      customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Professional fishery"');
-    }
-    if ( $('#usages').val() == 'Diving/Snorkeling, Professional fishery, Recreational fishery') {
-      customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Professional fishery, Recreational fishery"');
-    }
-    if ( $('#usages').val() == 'Diving/Snorkeling, Recreational fishery') {
-      customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Recreational fishery"');
-    }
-    if ( $('#usages').val() == 'Professional fishery') {
-      customFilters.push('r.properties["exploitation"] === "Professional fishery"');
-    }
-    if ( $('#usages').val() == 'Professional fishery, Recreational fishery') {
-      customFilters.push('r.properties["exploitation"] === "Professional fishery, Recreational fishery"');
-    }
+    //if ( $('#usages').val() == 'Diving') {
+      //customFilters.push('r.properties["exploitation"] === "Diving"');
+    //}
+    //if ( $('#usages').val() == 'Professional fishery') {
+      //customFilters.push('r.properties["exploitation"] === "Professional fishery"');
+    //}
+    //if ( $('#usages').val() == 'Recreational fishery') {
+      //customFilters.push('r.properties["exploitation"] === "Recreational fishery"');
+    //}
+    //if ( $('#usages').val() == 'Diving/Snorkeling') {
+      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling"');
+    //}
+    //if ( $('#usages').val() == 'Diving/Snorkeling, Professional fishery') {
+      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Professional fishery"');
+    //}
+    //if ( $('#usages').val() == 'Diving/Snorkeling, Professional fishery, Recreational fishery') {
+      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Professional fishery, Recreational fishery"');
+    //}
+    //if ( $('#usages').val() == 'Diving/Snorkeling, Recreational fishery') {
+      //customFilters.push('r.properties["exploitation"] === "Diving/Snorkeling, Recreational fishery"');
+    //}
+    //if ( $('#usages').val() == 'Professional fishery') {
+      //customFilters.push('r.properties["exploitation"] === "Professional fishery"');
+    //}
+    //if ( $('#usages').val() == 'Professional fishery, Recreational fishery') {
+      //customFilters.push('r.properties["exploitation"] === "Professional fishery, Recreational fishery"');
+    //}
     //if ( $('#usages').val() == ['Research','Snorkeling']) {;
     //}
 
