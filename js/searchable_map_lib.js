@@ -316,10 +316,12 @@ var SearchableMapLib = {
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $('#usages').val() == 'Research') {
+		console.log(arr.some(item => item.name === 'Blofeld'));
       customFilters.push('r.properties["exploitation"] === "Research"');
     }
     if ( $('#usages').val() == 'Snorkeling') {
-      customFilters.push('r.properties["exploitation"] === "Snorkeling"');
+	  customFilters.push('r.some(item => item.exploitation === "Snorkeling"');
+      //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
     }
     //if ( $('#usages').val() == 'Diving') {
       //customFilters.push('r.properties["exploitation"] === "Diving"');
