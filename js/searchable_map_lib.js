@@ -314,24 +314,22 @@ var SearchableMapLib = {
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
-    //var customFilters = [];
-    //if ( $('#usages').val() == 'Research') {
-      //customFilters.push('r.properties["exploitation"] === "Research"');
-    //}
-    //if ( $('#usages').val() == 'Snorkeling') {
-      //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
-    //}
-    //if ( $('#usages').val() == ['Research','Snorkeling']) {;
-    //}
-
-    //SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
-        //var filter = "";
-        //for (var i = 0; i < customFilters.length; i++) { 
-          //filter += customFilters[i] + " || " 
-        //}
-        //filter = filter.substring(0, filter.length - 3);
-        //return eval(filter);
-    //});
+    var customFilters = [];
+    if ( $('#cbType6').is(':checked') == 'Research') {
+      customFilters.push('r.properties["exploitation"] === "Research"');
+    }
+    if ( $('#cbType7').is(':checked') == 'Research') {
+      customFilters.push('r.properties["exploitation"] === "Snorkeling"');
+    }
+    
+    SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
+        var filter = "";
+        for (var i = 0; i < customFilters.length; i++) { 
+          filter += customFilters[i] + " || " 
+        }
+        filter = filter.substring(0, filter.length - 3);
+        return eval(filter);
+    });
     //-----end Usage filter-----
     
     
