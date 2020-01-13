@@ -311,18 +311,17 @@ var SearchableMapLib = {
     
     console.log('stampo il valore della variabile usages')
     console.log($('#usages').val())
-    console.log(r.some(item => item.exploitation === $('#usages').val()));
     
     //-----Usage filter-----
     //filter on country. constructing a list of OR statements based on what checkboxes are selected
     var customFilters = [];
     if ( $('#usages').val() == 'Research') {
-		console.log(arr.some(item => item.name === 'Blofeld'));
       customFilters.push('r.properties["exploitation"] === "Research"');
     }
     if ( $('#usages').val() == 'Snorkeling') {
 	  customFilters.push('r.properties["exploitation"] === "Snorkeling"');
     }
+    console.log(r.some(item => item.exploitation === $('#usages').val()));
     //if ( $('#usages').val() == 'Diving') {
       //customFilters.push('r.properties["exploitation"] === "Diving"');
     //}
