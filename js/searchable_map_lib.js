@@ -321,7 +321,8 @@ var SearchableMapLib = {
       customFilters.push('r.properties["exploitation"].match(/Research/g)');
     }
     if ( $('#usages').val() == 'Snorkeling') {
-	  customFilters.push('r.properties["exploitation"] === "Snorkeling"');
+	  //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
+	  customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
     }
     //if ( $('#usages').val() == 'Diving') {
       //customFilters.push('r.properties["exploitation"] === "Diving"');
