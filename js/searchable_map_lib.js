@@ -317,7 +317,6 @@ var SearchableMapLib = {
     var customFilters = [];
     if ($('#usages').val() != '') {
     if ( $('#usages').val() == 'Research') {
-	  customFilters.log('r')
 	  //customFilters.push('r.some(item => item.properties["exploitation"] === "Research")');	
       customFilters.push('r.properties["exploitation"] === "Research"');
     }
