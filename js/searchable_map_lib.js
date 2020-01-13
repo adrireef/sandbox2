@@ -317,23 +317,23 @@ var SearchableMapLib = {
     var customFilters = [];
     if ($('#usages').val() != '') {
 	
-	for (var i = 0; i < $('#usages').val().length; i++) {	
-	console.log($('#usages').val()[i])
-	if ( i == 'Research') {
+	for (var j = 0; j < $('#usages').val().length; j++) {	
+	console.log($('#usages').val()[j])
+	if ( $('#usages').val()[j] == 'Research') {
       customFilters.push('r.properties["exploitation"].match(/Research/g)');
     }
         
-    if ( i == 'Professional fishery') {
+    if ( $('#usages').val()[j] == 'Professional fishery') {
       customFilters.push('r.properties["exploitation"].match(/Professional fishery/g)');
     }
-    if ( i == 'Snorkeling') {
+    if ( $('#usages').val()[j] == 'Snorkeling') {
 	  //customFilters.push('r.properties["exploitation"] === "Snorkeling"');
 	  customFilters.push('r.properties["exploitation"].match(/Snorkeling/g)');
     }
-    if ( i == 'Diving') {
+    if ( $('#usages').val()[j] == 'Diving') {
       customFilters.push('r.properties["exploitation"].match(/Diving/g)');
     }
-    if ( i == 'Recreational fishery') {
+    if ( $('#usages').val()[j] == 'Recreational fishery') {
       customFilters.push('r.properties["exploitation"].match(/Recreational fishery/g)');
     }
 
