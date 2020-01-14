@@ -140,25 +140,19 @@
               </div>
               
 			<div class='row'>
-				<div class="col-md-12" >
-					<label for="customRange1">Depth (m)</label>
-					<input type="range" class="custom-range" id="depth">
+				<div class="col-md-12 rangeslider"> 
+					<label for="sliderRange">Depth (m)</label>
+					<input type="range" min="0" max="100" value="50" class="myslider" id="sliderRange"> 
+					<p>Value: <span id="demo"></span></p> 
 				</div>
 			</div>
 			  
-			<div class='row'>
-				<div class="rangeslider"> 
-					<input type="range" min="0" max="100" value="50" class="myslider" id="sliderRange"> 
-					<p>Value: <span id="demo"></span></p> 
-				</div> 
-<!--
 				<div class="col-md-12">
 					<label for="customRange1">Distance from the coast (km)</label>
 					<input type="range" class="custom-range" id="dist_coast">
 				</div>
--->
 			</div>
-
+		</div>
 
               <div class='row'>
                 <div class="col-md-12">Type of Reef
