@@ -283,7 +283,7 @@ var SearchableMapLib = {
 		//do nothing
 	} else {
 		console.log(currentVal)
-		customFilters.push('r.properties["min_depth_m"].toInt() <= currentVal');
+		customFilters.push('parseInt(r.properties["min_depth_m"]) <= currentVal');
 	}
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
