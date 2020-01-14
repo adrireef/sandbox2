@@ -267,6 +267,7 @@ var SearchableMapLib = {
     
     //-----Bottom depth filter-----
     //slider definition
+	if ($('#sliderRange').val() != '50') {
 	var rangeslider = document.getElementById("sliderRange"); 
 	var defaultVal = rangeslider.defaultValue;
 	var currentVal = rangeslider.value; 
@@ -281,6 +282,7 @@ var SearchableMapLib = {
 	if (defaultVal == currentVal) {
 		//do nothing
 	} else {
+		console.log(currentVal)
 		customFilters.push('r.properties["min_depth_m"] <= currentVal');
 	}
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
@@ -291,6 +293,7 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
+}
     //-----end Bottom depth filter-----
     
 
