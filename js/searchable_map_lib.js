@@ -264,6 +264,17 @@ var SearchableMapLib = {
 
  
     //-----custom filters-----
+    
+	var rangeslider = document.getElementById("sliderRange"); 
+	var output = document.getElementById("demo"); 
+	output.innerHTML = rangeslider.value; 
+  
+	rangeslider.oninput = function() { 
+	output.innerHTML = this.value; 
+	} 
+    
+    
+    
 
     //-----Reef type filter-----
     //filter on Reef type. constructing a list of OR statements based on what checkboxes are selected
