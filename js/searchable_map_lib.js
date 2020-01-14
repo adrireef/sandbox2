@@ -267,23 +267,22 @@ var SearchableMapLib = {
     
     //-----Bottom depth filter-----
     //slider definition
-	if ($('#sliderRange').val() != '50') {
-	var rangeslider = document.getElementById("sliderRange"); 
-	var defaultVal = rangeslider.defaultValue;
-	var currentVal = rangeslider.value; 
-	var output = document.getElementById("demo"); 
-	output.innerHTML = rangeslider.value; 
+	if ($('#sliderDepth').val() != '50') {
+	var rangedepth = document.getElementById("sliderDepth"); 
+	var defaultValDe = rangedepth.defaultValue;
+	var currentValDe = rangedepth.value; 
+	var output = document.getElementById("demo1"); 
+	output.innerHTML = rangedepth.value; 
   
-	rangeslider.oninput = function() { 
+	rangedepth.oninput = function() { 
 	output.innerHTML = this.value; 
 	} 
 	//data parsing
 	var customFilters = [];
-	if (defaultVal == currentVal) {
+	if (defaultValDe == currentValDe) {
 		//do nothing
 	} else {
-		console.log(currentVal)
-		customFilters.push('parseInt(r.properties["min_depth_m"]) <= currentVal');
+		customFilters.push('parseInt(r.properties["min_depth_m"]) <= currentValDe');
 	}
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
