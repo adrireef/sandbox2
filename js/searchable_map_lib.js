@@ -282,7 +282,7 @@ var SearchableMapLib = {
 	if (defaultValDe == currentValDe) {
 		//do nothing
 	} else {
-		customFilters.push('parseInt(r.properties["min_depth_m"]) <= currentValDe');
+		customFilters.push('parseFloat(r.properties["min_depth_m"]) <= currentValDe');
 	}
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
@@ -313,7 +313,7 @@ var SearchableMapLib = {
 	if (defaultValDi == currentValDi) {
 		//do nothing
 	} else {
-		customFilters.push('parseInt(r.properties["Min_dist_filt_km"]) <= currentValDi');
+		customFilters.push('parseFloat(r.properties["Min_dist_filt_km"]) <= currentValDi');
 	}
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
