@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, then Ajax for sliders -->
     <script src="lib/jquery-3.3.1.min.js"></script>
     <script src="lib/popper.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
@@ -43,6 +43,7 @@
     <script src="lib/moment.js"></script>
     <script src="lib/geojson.min.js"></script>
     <script src="js/csv-to-geojson.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!-- Leaflet and Google -->
     <link rel="stylesheet" href="css/leaflet.css"/>
@@ -134,17 +135,24 @@
                 <div class="col-md-10">
                   <div class="form-group">
                       Search by name
-                      <input class='form-control' id='search-name' placeholder='Enter a business or organization name' type='text'>
+                      <input class='form-control' id='search-name' placeholder='Enter a reef name' type='text'>
                   </div>
                 </div>
               </div>
               
               
 			<div class='row'>
+				<div class="range-slider">
+					<label for="depth">Depth (m)</label>
+					<input class="range-slider__range" type="range" value="100" min="0" max="500" id="depth">
+					<span class="range-slider__value">0</span>
+				</div>
+<!--
 				<div class="col-md-9">
 					<label for="customRange1">Depth (m)</label>
 					<input type="range" class="custom-range" id="depth">
 				</div>
+-->
 			</div>
 			  
 			<div class='row'>
