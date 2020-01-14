@@ -295,6 +295,37 @@ var SearchableMapLib = {
 }
     //-----end Bottom depth filter-----
     
+    
+    //-----Distance from the coastline filter-----
+    //slider definition
+	if ($('#sliderDistance').val() != '10') {
+	var rangedistance = document.getElementById("sliderDistance"); 
+	var defaultValDi = rangedistance.defaultValue;
+	var currentValDi = rangedistance.value; 
+	var output = document.getElementById("demo2"); 
+	output.innerHTML = rangedistance.value; 
+  
+	rangedistance.oninput = function() { 
+	output.innerHTML = this.value; 
+	} 
+	//data parsing
+	var customFilters = [];
+	if (defaultValDi == currentValDi) {
+		//do nothing
+	} else {
+		customFilters.push('parseInt(r.properties["Min_dist_filt_km"]) <= currentValDi');
+	}
+    SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
+        var filter = "";
+        for (var i = 0; i < customFilters.length; i++) { 
+          filter += customFilters[i] + " || " 
+        }
+        filter = filter.substring(0, filter.length - 3);
+        return eval(filter);
+    });
+}
+    //-----end Distance fromt he coastline filter-----
+    
 
     //-----Reef type filter-----
     //filter on Reef type. constructing a list of OR statements based on what checkboxes are selected
