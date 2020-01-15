@@ -70,7 +70,7 @@
       <div class='row'>
 
 <!--column1-->
-          <div class= 'col-sm-6 col-md-6 col-lg-6'>
+          <div class='col-md-7'>
             <div id='mapCanvas' style="display: block; height: 950px;"></div>
             <div id="listCanvas" style="display: none">
               <h2 class='list-header hidden-xs'>Search results <small id='list-result-count'></small></h2>
@@ -97,24 +97,25 @@
               </div>
             </div>
             <p class='float-right'>Data and classification from the <a href='https://www.italy-croatia.eu/web/adrireef/about-the-project' target='_blank'><font color = "orange"<b>ADRIREEF</b></font></a> Interreg Project - based on the template <a href='https://github.com/datamade/searchable-map-template-csv' target='_blank'>Searchable Map Template - CSV</a></p>
-          
+          </div>
+
 <!--column2-->
-		<div class="col-sm-1 col-md-1 col-lg-1"><img src="img/banda2.png" alt="interreg_logo" width = "85%" align = "left"></div>
+		<div class="col-md-0.3"><img src="img/banda2.png" alt="interreg_logo" width = "85%" align = "left"></div>
 			
 <!--column3-->
-		<div class="col-sm-5 col-md-5 col-lg-5">
+		<div class="col-md-5.7">
           <div class="card bg-light">
             <div class="card-body">
               
               <div class='row'>
-                <div class="col-sm-8 col-md-8 col-lg-8">
+                <div class="col-md-8">
                   <div class="form-group">
                       Near an address
                       <input class='form-control' id='search-address' placeholder='Enter an address' type='text'>
                   </div>
                 </div>
 
-                <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="col-md-4">
                   <div class='form-group'>
                       Within
                       <select id='search-radius' class='form-control'>
@@ -130,7 +131,7 @@
              
 
               <div class='row'>
-                <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="col-md-12">
                   <div class="form-group">
                       Search by name
                       <input class='form-control' id='search-name' placeholder='Enter a reef name' type='text'>
@@ -139,9 +140,9 @@
               </div>
             
             <div class='row'>
-                <div class="col-sm-12 col-md-12 col-lg-12">Depth (m)  
+                <div class="col-md-12">Depth (m)  
 			<div class='row'>
-				<div class="col-sm-12 col-md-12 col-lg-12 rangeslider"> 
+				<div class="col-md-12 rangeslider"> 
 					<input type="range" min="0" max="100" value="50" class="myslider" id="sliderDepth"> 
 					Value: <span id="demo1"></span>
 				</div>
@@ -150,9 +151,9 @@
 			</div>
 			
 			<div class='row'>
-                <div class="col-sm-12 col-md-12 col-lg-12">Distance from the coastline (km)  
+                <div class="col-md-12">Distance from the coastline (km)  
 			<div class='row'>
-				<div class="col-sm-12 col-md-12 col-lg-12 rangeslider"> 
+				<div class="col-md-12 rangeslider"> 
 
 					<input type="range" min="0" max="20" value="10" class="myslider" id="sliderDistance"> 
 					Value: <span id="demo2"></span>
@@ -162,7 +163,7 @@
 			</div>			
 
               <div class='row'>
-                <div class="col-sm-12 col-md-12 col-lg-12">Type of Reef
+                <div class="col-md-12">Type of Reef
                   <div class='form-group'>
                     
                     <div class="form-check form-check-inline">
@@ -191,7 +192,7 @@
 			</div>
 
 			<div class='row'>
-                <div class="col-sm-12 col-md-12 col-lg-12">Country
+                <div class="col-md-12">Country
                   <div class='form-group'>
 
                     <div class="form-check form-check-inline">
@@ -213,7 +214,7 @@
               </div>
               
 		<div class='row'>
-			<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="col-md-12">
 				<div class="form-group">
 					
 					<label for="usages">Usage</label>
@@ -231,7 +232,7 @@
 			  
 			  			  
 		<div class='row'>
-			<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="col-md-12">
 				<div class="form-group">
 					<label for="typologies">Natural reef typology</label>
 					<select multiple class="form-control" id="typologies" size="2">
@@ -245,7 +246,7 @@
 		</div>
 			  
 		<div class='row'>
-			<div class="col-sm-12 col-md-12 col-lg-12">
+			<div class="col-md-12">
 				<div class="form-group">
 					<label for="materials">Artificial reef material</label>
 					<select multiple class="form-control" id="materials" size="2">
@@ -264,6 +265,7 @@
               </div>
             </div>
           </div>
+        </div>
       </div>
 
 <!--generic-->
