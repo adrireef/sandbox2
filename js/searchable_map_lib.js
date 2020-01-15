@@ -516,8 +516,8 @@ var SearchableMapLib = {
 
   setZoom: function() {
     var zoom = '';
-    if (SearchableMapLib.radius >= 100000) zoom = 10;
-    else if (SearchableMapLib.radius >= 50000) zoom = 11;
+    if (SearchableMapLib.radius >= 100000) zoom = 9;
+    else if (SearchableMapLib.radius >= 50000) zoom = 10;
     else if (SearchableMapLib.radius >= 30000) zoom = 11;
     else if (SearchableMapLib.radius >= 10000) zoom = 12;
     else if (SearchableMapLib.radius >= 1000) zoom = 14;
