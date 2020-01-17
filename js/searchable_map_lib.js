@@ -271,11 +271,11 @@ var SearchableMapLib = {
 	var rangedepth = document.getElementById("sliderDepth"); 
 	var defaultValDe = rangedepth.defaultValue;
 	var currentValDe = rangedepth.value; 
-	var output = document.getElementById("demo1"); 
-	output.innerHTML = rangedepth.value; 
+	var output1 = document.getElementById("demo1"); 
+	output1.innerHTML = rangedepth.value; 
   
 	rangedepth.oninput = function() { 
-	output.innerHTML = this.value; 
+	output1.innerHTML = this.value; 
 	} 
 	//data parsing
 	var customFilters = [];
@@ -302,11 +302,11 @@ var SearchableMapLib = {
 	var rangedistance = document.getElementById("sliderDistance"); 
 	var defaultValDi = rangedistance.defaultValue;
 	var currentValDi = rangedistance.value; 
-	var output = document.getElementById("demo2"); 
-	output.innerHTML = rangedistance.value; 
+	var output2 = document.getElementById("demo2"); 
+	output2.innerHTML = rangedistance.value; 
   
 	rangedistance.oninput = function() { 
-	output.innerHTML = this.value; 
+	output2.innerHTML = this.value; 
 	} 
 	//data parsing
 	var customFilters = [];
