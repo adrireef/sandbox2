@@ -33,6 +33,6 @@ At the bottom of the page there are:
 
 ![Table view](https://github.com/adrireef/sandbox2/tree/master/img/tebleview.png)
 
-The project ADRIREEF (innovative exploitation of Adriatic Reefs in order to strengthen blue economy) is funded by the Program Italy-Croatia CBC 2014-2020, Interreg V-A, CUP C66H180020004, CIG 78587941F8;
+The project [ADRIREEF](https://www.italy-croatia.eu/web/adrireef/) (innovative exploitation of Adriatic Reefs in order to strengthen blue economy) is funded by the Program Italy-Croatia CBC 2014-2020, Interreg V-A, CUP C66H180020004, CIG 78587941F8;
 
 The template used for this work is [Searchable map lib template - CSV](https://github.com/datamade/searchable-map-template-csv)
