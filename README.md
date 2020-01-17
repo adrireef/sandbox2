@@ -1,6 +1,6 @@
 # [ADRIREEF.maps webgis](https://adrireef.github.io/sandbox2/)
 
-This page contains the ADRIREEF Interreg Project webgis. Data comes from a large recognition of infromation on reefs relying on the Adriatic Sea, both from Italian and Croatian coastline. Both natural and artificial reefs and wrecks are considered.
+This page contains the ADRIREEF (innovative exploitation of Adriatic Reefs in order to strengthen blue economy) Interreg Project webgis. Data comes from a large recognition of infromation on reefs relying on the Adriatic Sea, both from Italian and Croatian coastline. Both natural and artificial reefs and wrecks are considered.
 
 The page is divided in two windows: on the left there is the map where points, identifying reefs, are divided by color in Natural (green) and Artificial reefs (blue) and wrecks (red). Hovering on the reefs with the mouse, Name and Location of the reef appear in the left bottom corner of the map. In the right top corner, the total number of reefs visualized is shown.
 
@@ -32,5 +32,7 @@ At the bottom of the page there are:
 
 
 ![Table view](https://github.com/adrireef/sandbox2/tree/master/img/tebleview.png)
+
+The project ADRIREEF (innovative exploitation of Adriatic Reefs in order to strengthen blue economy) is funded by the Program Italy-Croatia CBC 2014-2020, Interreg V-A, CUP C66H180020004, CIG 78587941F8;
 
 The template used for this work is [Searchable map lib template - CSV](https://github.com/datamade/searchable-map-template-csv)
