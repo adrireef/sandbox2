@@ -12,7 +12,7 @@ $(function() {
     fileType: 'csv',
     recordName: 'reef',
     recordNamePlural: 'reefs',
-    map_centroid: [43.0329591,15.9189127],
+    map_centroid: [43.0329591,14.9487048],
     defaultZoom:  7,
     minZoom: 5,
     defaultRadius: 10000,
