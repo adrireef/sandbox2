@@ -222,15 +222,6 @@ var SearchableMapLib = {
     $('#list-result-count').html(SearchableMapLib.currentResults.features.length.toLocaleString('en') + ' ' + recname + ' found')
   },
   
-  function printDiv() {
-	var divToPrint=document.getElementById('modal-pop');
-	var newWin=window.open('','Print-Window');
-	newWin.document.open();
-	newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
-	newWin.document.close();
-	setTimeout(function(){newWin.close();},10);
-	}
-  
   modalPop: function(data) {
     if (SearchableMapLib.debug) {
       console.log('launch modal')
@@ -574,3 +565,12 @@ var SearchableMapLib = {
   // -----end custom functions-----
 
 }
+
+  function printDiv() {
+	var divToPrint=document.getElementById('modal-pop');
+	var newWin=window.open('','Print-Window');
+	newWin.document.open();
+	newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+	newWin.document.close();
+	setTimeout(function(){newWin.close();},10);
+	}
