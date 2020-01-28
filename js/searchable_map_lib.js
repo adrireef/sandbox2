@@ -55,7 +55,8 @@ var SearchableMapLib = {
       SearchableMapLib.map = new L.Map('mapCanvas', {
         center: SearchableMapLib.map_centroid,
         zoom: SearchableMapLib.defaultZoom,
-        scrollWheelZoom: true
+        scrollWheelZoom: true,
+        minZoom: 5
       });
 
       SearchableMapLib.google = L.gridLayer.googleMutant({type: 'roadmap' });
