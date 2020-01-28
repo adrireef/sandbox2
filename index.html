@@ -70,46 +70,7 @@
 
       <div class='row'>
 
-<!--column1-->
-          <div class= 'col-sm-7 col-md-7 col-lg-7'>
-            <div id='mapCanvas' style="display: block; height: 950px;"></div>
-            <div id="listCanvas" style="display: none">
-              <h2 class='list-header hidden-xs'>Search results <small id='list-result-count'></small></h2>
-              
-              <div class="table-responsive">
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">Name</th>
-                      <th scope="col">Type</th>
-                      <th scope="col">Country</th>
-                      <th scope="col">Region</th>
-                      <th scope="col">Location</th>
-                      <th scope="col">Depth [m]</th>
-                      <th scope="col">Dist. from Coast [km]</th>
-                      <th scope="col">Surrounding Seabed</th>
-                      <th scope="col">Reef Typology</th>
-                      <th scope="col">Exploitation</th>
-                      <th scope="col">Available Literature (Scientific or Grey)</th>
-                    </tr>
-                  </thead>
-                  <tbody id='results-list'></tbody>
-                </table>
-              </div>
-            </div>
-            <p class='float-right' style="margin-top:10px"><font size = "2">The available database is a product of the "related activities" implemented within the ADRIREEF project 
-            and comprises artificial and natural reefs in Adriatic sea. More information on the project is available on the ADRIREEF website: 
-            <a href='https://www.italy-croatia.eu/web/adrireef/about-the-project' target='_blank'>https://www.italy-croatia.eu/web/adrireef/about-the-project</a>. 
-            If you are aware of any other Adriatic reef not listed in this inventory please contact <a href="mailto:adrireef@irbim.cnr.it">adrireef@irbim.cnr.it</a> 
-            - Template: <a href='https://github.com/datamade/searchable-map-template-csv' target='_blank'>Searchable Map Template - CSV</a></p>
-			</font></div>
-
 <!--column2-->
-<!--
-		<div class="col-sm-0.3 col-md-0.3 col-lg-0.3"><img src="img/banda2.png" alt="interreg_logo" width = "85%" align = "left"></div>
--->
-			
-<!--column3-->
 		<div class="col-sm-5 col-md-5 col-lg-5">
           <div class="card bg-light">
             <div class="card-body">
@@ -275,10 +236,45 @@
         </div>
       </div>
 
+
+<!--column1-->
+          <div class= 'col-sm-7 col-md-7 col-lg-7'>
+            <div id='mapCanvas' style="display: block; height: 950px;"></div>
+            <div id="listCanvas" style="display: none">
+              <h2 class='list-header hidden-xs'>Search results <small id='list-result-count'></small></h2>
+              
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Type</th>
+                      <th scope="col">Country</th>
+                      <th scope="col">Region</th>
+                      <th scope="col">Location</th>
+                      <th scope="col">Depth [m]</th>
+                      <th scope="col">Dist. from Coast [km]</th>
+                      <th scope="col">Surrounding Seabed</th>
+                      <th scope="col">Reef Typology</th>
+                      <th scope="col">Exploitation</th>
+                      <th scope="col">Available Literature (Scientific or Grey)</th>
+                    </tr>
+                  </thead>
+                  <tbody id='results-list'></tbody>
+                </table>
+              </div>
+            </div>
+            <p class='float-right' style="margin-top:10px"><font size = "2">The available database is a product of the "related activities" implemented within the ADRIREEF project 
+            and comprises artificial and natural reefs in Adriatic sea. More information on the project is available on the ADRIREEF website: 
+            <a href='https://www.italy-croatia.eu/web/adrireef/about-the-project' target='_blank'>https://www.italy-croatia.eu/web/adrireef/about-the-project</a>. 
+            If you are aware of any other Adriatic reef not listed in this inventory please contact <a href="mailto:adrireef@irbim.cnr.it">adrireef@irbim.cnr.it</a> 
+            - Template: <a href='https://github.com/datamade/searchable-map-template-csv' target='_blank'>Searchable Map Template - CSV</a></p>
+			</font></div>
+
 <!--generic-->
 
         <div class="modal fade" id="modal-pop" tabindex="-1" role="dialog" >
-          <div class="modal-dialog modal-lg" style="position:absolute; right:0px; left:600px; width:1000px; margin:auto;">
+          <div class="modal-dialog modal-lg" style="position:absolute; right:0px; left:600px;">
             <div class="modal-content">
               <div class="modal-body">
                 <div class="container-fluid bd-example-row">
