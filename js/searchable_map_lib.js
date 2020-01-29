@@ -568,7 +568,7 @@ var SearchableMapLib = {
 
   function printDiv() {
 	var divToPrint=document.getElementById('modal-pop');
-	var newWin=window.open('','Print-Window', 'scrollbars=no');
+	var newWin=window.open('','Print-Window', 'style="word-wrap: break-word; "');
 	newWin.document.open();
 	newWin.document.write('<html><body onload="window.print()"><pre style="width:100%; background:white; line-height:0.5cm; text-align:justify; font-family:calibri,arial,sans-serif; padding:0 20px;">'+divToPrint.innerHTML+'</pre></body></html>');
 	newWin.document.close();
