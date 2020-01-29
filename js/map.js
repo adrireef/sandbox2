@@ -8,7 +8,7 @@ $(window).resize(function () {
 $(function() {
 
   SearchableMapLib.initialize({
-    filePath: 'data/end_DB_blank_filledUp1.csv',
+    filePath: 'data/DB_end.csv',
     fileType: 'csv',
     recordName: 'reef',
     recordNamePlural: 'reefs',

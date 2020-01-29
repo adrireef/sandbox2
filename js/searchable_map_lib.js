@@ -451,14 +451,20 @@ var SearchableMapLib = {
 	for (var j = 0; j < $('#materials').val().length; j++) {
 	var customFilters = [];	
 	console.log($('#materials').val()[j])
-	if ( $('#materials').val()[j] == 'Steel') {
-      customFilters.push('r.properties["Material"].match(/Steel/g)');
+	if ( $('#materials').val()[j] == 'Concrete') {
+      customFilters.push('r.properties["Material_simply"] === "Concrete"');
     }   
-    if ( $('#materials').val()[j] == 'Concrete') {
-      customFilters.push('r.properties["Material"].match(/Concrete/g)');
+    if ( $('#materials').val()[j] == 'Concrete & Other') {
+      customFilters.push('r.properties["Material_simply"] === "Concrete & Other"');
     }
-    if ( $('#materials').val()[j] == 'Rocks') {
-	  customFilters.push('r.properties["Material"].match(/Rocks/g)');
+    if ( $('#materials').val()[j] == 'Concrete, Polyethylene') {
+	  customFilters.push('r.properties["Material_simply"] === "Concrete, Polyethylene"');
+    }
+    if ( $('#materials').val()[j] == 'Concrete, Rocks, Steel/Iron') {
+	  customFilters.push('r.properties["Material_simply"] === "Concrete, Rocks, Steel/Iron"');
+    }
+    if ( $('#materials').val()[j] == 'Steel/Iron') {
+	  customFilters.push('r.properties["Material_simply"] === "Steel/Iron"');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
