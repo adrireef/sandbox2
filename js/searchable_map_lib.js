@@ -269,6 +269,7 @@ var SearchableMapLib = {
     //-----Bottom depth filter-----
     //slider definition
 //	if ($('#sliderDepth').val() != '50') {
+	$('#cbType6').prop('checked', false);
 	if ($("#cbType6").is(':checked')) {
 	var rangedepth = document.getElementById("sliderDepth"); 
 	var defaultValDe = rangedepth.defaultValue;
@@ -301,6 +302,7 @@ var SearchableMapLib = {
     //-----Distance from the coastline filter-----
     //slider definition
 //	if ($('#sliderDistance').val() != '10') {
+	$('#cbType7').prop('checked', false);
 	if ($("#cbType7").is(':checked')) {
 	var rangedistance = document.getElementById("sliderDistance"); 
 	var defaultValDi = rangedistance.defaultValue;
