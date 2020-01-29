@@ -570,7 +570,7 @@ var SearchableMapLib = {
 	var divToPrint=document.getElementById('modal-pop');
 	var newWin=window.open('','Print-Window');
 	newWin.document.open();
-	newWin.document.write('<html><body>'+divToPrint.innerHTML+'</body></html>');
+	newWin.document.write('<html><body>'+divToPrint.innerHTML+'<form><input type="button" value="print" onclick="window.print()" /></form></body></html>');
 	window.print();
 	newWin.document.close();
 	setTimeout(function(){newWin.close();},10);
