@@ -446,7 +446,7 @@ var SearchableMapLib = {
     
     //-----Artificial reef material filter-----
     //filter on artificial reef material. constructing a list of AND statements based on what lines in the dropdown menu are selected
-    if ($('#materials').val() != '') {
+    if ($('#materials').val() != 'Select One') {
 	
 	var customFilters = [];	
 	console.log($('#materials').val())
