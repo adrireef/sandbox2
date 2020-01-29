@@ -280,12 +280,14 @@ var SearchableMapLib = {
 	output1.innerHTML = this.value; 
 	} 
 	//data parsing
+	//var customFilters = [];
+	//if (defaultValDe == currentValDe) {
+		////do nothing
+	//} else {
+		//customFilters.push('parseFloat(r.properties["min_depth_m"]) <= currentValDe');
+	//}
 	var customFilters = [];
-	if (defaultValDe == currentValDe) {
-		//do nothing
-	} else {
-		customFilters.push('parseFloat(r.properties["min_depth_m"]) <= currentValDe');
-	}
+	customFilters.push('parseFloat(r.properties["min_depth_m"]) <= currentValDe');
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
         for (var i = 0; i < customFilters.length; i++) { 
@@ -312,12 +314,14 @@ var SearchableMapLib = {
 	output2.innerHTML = this.value; 
 	} 
 	//data parsing
+	//var customFilters = [];
+	//if (defaultValDi == currentValDi) {
+		////do nothing
+	//} else {
+		//customFilters.push('parseFloat(r.properties["Min_dist_filt_km"]) <= currentValDi');
+	//}
 	var customFilters = [];
-	if (defaultValDi == currentValDi) {
-		//do nothing
-	} else {
-		customFilters.push('parseFloat(r.properties["Min_dist_filt_km"]) <= currentValDi');
-	}
+	customFilters.push('parseFloat(r.properties["Min_dist_filt_km"]) <= currentValDi');
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
         for (var i = 0; i < customFilters.length; i++) { 
