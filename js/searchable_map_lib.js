@@ -374,7 +374,7 @@ var SearchableMapLib = {
     
     //-----Usage filter-----
     //filter on usage. constructing a list of AND statements based on what lines in the dropdown menu are selected
-    if ($('#usages').val() != '') {
+    if ($('#usages').val() != 'Select More') {
 	
 	for (var j = 0; j < $('#usages').val().length; j++) {
 	var customFilters = [];	
@@ -414,7 +414,7 @@ var SearchableMapLib = {
     
     //-----Natural reef typology filter-----
     //filter on natural reef typology. constructing a list of AND statements based on what lines in the dropdown menu are selected
-    if ($('#typologies').val() != '') {
+    if ($('#typologies').val() != 'Select More') {
 	
 	for (var j = 0; j < $('#typologies').val().length; j++) {
 	var customFilters = [];	
