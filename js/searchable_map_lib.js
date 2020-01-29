@@ -269,7 +269,7 @@ var SearchableMapLib = {
     //-----Bottom depth filter-----
     //slider definition
 //	if ($('#sliderDepth').val() != '50') {
-	$('#cbType6').prop('checked', false);
+	$('input.inputUncheck').prop('checked', false);
 	if ($("#cbType6").is(':checked')) {
 	var rangedepth = document.getElementById("sliderDepth"); 
 	var defaultValDe = rangedepth.defaultValue;
