@@ -448,22 +448,21 @@ var SearchableMapLib = {
     //filter on artificial reef material. constructing a list of AND statements based on what lines in the dropdown menu are selected
     if ($('#materials').val() != '') {
 	
-	for (var j = 0; j < $('#materials').val().length; j++) {
 	var customFilters = [];	
-	console.log($('#materials').val()[j])
-	if ( $('#materials').val()[j] == 'Concrete') {
+	console.log($('#materials').val())
+	if ( $('#materials').val() == 'Concrete') {
       customFilters.push('r.properties["Material_simply"] === "Concrete"');
     }   
-    if ( $('#materials').val()[j] == 'Concrete & Other') {
+    if ( $('#materials').val() == 'Concrete & Other') {
       customFilters.push('r.properties["Material_simply"] === "Concrete & Other"');
     }
-    if ( $('#materials').val()[j] == 'Concrete, Polyethylene') {
+    if ( $('#materials').val() == 'Concrete, Polyethylene') {
 	  customFilters.push('r.properties["Material_simply"] === "Concrete, Polyethylene"');
     }
-    if ( $('#materials').val()[j] == 'Concrete, Rocks, Steel/Iron') {
+    if ( $('#materials').val() == 'Concrete, Rocks, Steel/Iron') {
 	  customFilters.push('r.properties["Material_simply"] === "Concrete, Rocks, Steel/Iron"');
     }
-    if ( $('#materials').val()[j] == 'Steel/Iron') {
+    if ( $('#materials').val() == 'Steel/Iron') {
 	  customFilters.push('r.properties["Material_simply"] === "Steel/Iron"');
     }
 
@@ -475,7 +474,6 @@ var SearchableMapLib = {
         filter = filter.substring(0, filter.length - 3);
         return eval(filter);
     });
-	}
 	}
     //-----end Artificial reef material filter-----    
  
