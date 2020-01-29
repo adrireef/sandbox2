@@ -571,7 +571,7 @@ var SearchableMapLib = {
 	var newWin=window.open('','Print-Window');
 	newWin.document.open();
 	newWin.document.write('<html><body>'+divToPrint.innerHTML+'</body></html>');
-	newWin.document.print();
+	window.print();
 	newWin.document.close();
 	setTimeout(function(){newWin.close();},10);
 	}
