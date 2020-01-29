@@ -570,7 +570,9 @@ var SearchableMapLib = {
 	var divToPrint=document.getElementById('modal-pop');
 	var newWin=window.open('','Print-Window');
 	newWin.document.open();
-	newWin.document.write('<html><body onload="window.print()">'+divToPrint.textContent+'</body></html>');
+	newWin.document.write('</head><body onload="window.print()">');
+	newWin.document.write("<pre id='modal-pop' style='height:85%;overflow:auto; background:white'>" + id.textContent + "</pre>");
+	newWin.document.write('</body></html>');
 	newWin.document.close();
 	setTimeout(function(){newWin.close();},10);
 	}
