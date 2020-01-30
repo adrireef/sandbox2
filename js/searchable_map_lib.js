@@ -520,7 +520,12 @@ var SearchableMapLib = {
       layer.on({
         mouseover: hoverFeature,
         mouseout: removeHover,
-        click: modalPop
+        click: {
+                modalPop;
+                layer.setStyle({
+                  icon: yellowIcon
+                })}
+//        click: modalPop
       });
     }
 
@@ -533,7 +538,8 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-      SearchableMapLib.modalPop(e.target.feature.properties)
+      SearchableMapLib.modalPop(e.target.feature.properties);
+//      layer.setStyle{icon: yellowIcon}
     }
 
   },
