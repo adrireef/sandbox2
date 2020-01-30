@@ -534,7 +534,7 @@ var SearchableMapLib = {
 
     function modalPop(e) {
       SearchableMapLib.modalPop(e.target.feature.properties);
-//      layer.setStyle{icon: yellowIcon}
+      layer.setStyle({icon: yellowIcon});
     }
 
   },
