@@ -520,12 +520,7 @@ var SearchableMapLib = {
       layer.on({
         mouseover: hoverFeature,
         mouseout: removeHover,
-        click: {
-                modalPop;
-                layer.setStyle({
-                  icon: yellowIcon
-                })}
-//        click: modalPop
+        click: modalPop
       });
     }
 
