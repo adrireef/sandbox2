@@ -441,6 +441,9 @@ var SearchableMapLib = {
     if ( $("#cbType3").is(':checked')) {
       customFilters.push('r.properties["type"] === "Wreck"');
     }
+    if ( $("#cbType2").is(':checked')) {
+      customFilters.push('r.properties["type"] === "Artificial reef"');
+    }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
@@ -477,6 +480,9 @@ var SearchableMapLib = {
     }
     if ( $("#cbType3").is(':checked')) {
       customFilters.push('r.properties["type"] === "Wreck"');
+    }
+    if ( $("#cbType1").is(':checked')) {
+      customFilters.push('r.properties["type"] === "Natural reef"');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
