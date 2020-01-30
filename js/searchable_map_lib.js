@@ -438,6 +438,9 @@ var SearchableMapLib = {
     if ( $('#typologies').val()[j] == 'High') {
       customFilters.push('r.properties["reef_typology"].match(/High/g)');
     }
+    if ( $("#cbType3").is(':checked')) {
+      customFilters.push('r.properties["type"] === "Wreck"');
+    }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
@@ -471,6 +474,9 @@ var SearchableMapLib = {
     }
     if ( $('#materials').val() == 'Steel/Iron') {
 	  customFilters.push('r.properties["Material_simply"] === "Steel/Iron"');
+    }
+    if ( $("#cbType3").is(':checked')) {
+      customFilters.push('r.properties["type"] === "Wreck"');
     }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
