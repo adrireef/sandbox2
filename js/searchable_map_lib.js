@@ -426,17 +426,34 @@ var SearchableMapLib = {
 	var customFilters = [];	
 	console.log($('#typologies').val()[j])
 	if ( $('#typologies').val()[j] == 'Patch reef') {
-      customFilters.push('r.properties["reef_typology"].match(/Patch reef/g)');
+      customFilters.push('r.properties["Material_simply"].match(/Patch reef/g)');
     }   
     if ( $('#typologies').val()[j] == 'Ledges') {
-      customFilters.push('r.properties["reef_typology"].match(/Ledges/g)');
+      customFilters.push('r.properties["Material_simply"].match(/Ledges/g)');
     }
     if ( $('#typologies').val()[j] == 'Low') {
-	  customFilters.push('r.properties["reef_typology"].match(/Low/g)');
+	  customFilters.push('r.properties["Material_simply"].match(/Low/g)');
     }
     if ( $('#typologies').val()[j] == 'High') {
-      customFilters.push('r.properties["reef_typology"].match(/High/g)');
+      customFilters.push('r.properties["Material_simply"].match(/High/g)');
     }
+	
+	
+	
+	
+	
+	//if ( $('#typologies').val()[j] == 'Patch reef') {
+      //customFilters.push('r.properties["reef_typology"].match(/Patch reef/g)');
+    //}   
+    //if ( $('#typologies').val()[j] == 'Ledges') {
+      //customFilters.push('r.properties["reef_typology"].match(/Ledges/g)');
+    //}
+    //if ( $('#typologies').val()[j] == 'Low') {
+	  //customFilters.push('r.properties["reef_typology"].match(/Low/g)');
+    //}
+    //if ( $('#typologies').val()[j] == 'High') {
+      //customFilters.push('r.properties["reef_typology"].match(/High/g)');
+    //}
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
