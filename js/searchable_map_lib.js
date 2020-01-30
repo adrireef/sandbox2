@@ -321,7 +321,7 @@ var SearchableMapLib = {
 		//customFilters.push('parseFloat(r.properties["Min_dist_filt_km"]) <= currentValDi');
 	//}
 	var customFilters = [];
-	
+	customFilters.push('parseFloat(r.properties["Min_dist_filt_km"]) <= currentValDi');
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
         for (var i = 0; i < customFilters.length; i++) { 
