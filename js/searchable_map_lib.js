@@ -533,7 +533,8 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-	  SearchableMapLib.addIcon(L.LatLng( SearchableMapLib.currentPinpoint[0], SearchableMapLib.currentPinpoint[1] ));
+	  var selectedPoint = [e.target.feature.geometry.location.lat(), e.target.feature.geometry.location.lng()];
+	  SearchableMapLib.addIcon(selectedPoint);
       SearchableMapLib.modalPop(e.target.feature.properties);
 //    getIcon:yellowIcon
     }
