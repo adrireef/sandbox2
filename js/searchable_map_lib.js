@@ -539,9 +539,7 @@ var SearchableMapLib = {
 	  SearchableMapLib.selectIcon();
 	  };
       SearchableMapLib.modalPop(e.target.feature.properties);
-      SearchableMapLib.currentPinpoint.setMap(null);
-      SearchableMapLib.currentPinpoint=null;
-//      SearchableMapLib.map.removeLayer(SearchableMapLib.currentPinpoint);
+      SearchableMapLib.map.removeLayer(SearchableMapLib.currentPinpoint);
 //    getIcon:yellowIcon
     }
 
