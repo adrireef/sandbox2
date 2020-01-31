@@ -533,8 +533,10 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-	  SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[0], e.target.feature.geometry.coordinates[1]];
+	  SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
 //	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
+		console.log('valore di current pinpoint:')
+          console.log(SearchableMapLib.currentPinpoint);
 	  SearchableMapLib.addIcon();
       SearchableMapLib.modalPop(e.target.feature.properties);
 //    getIcon:yellowIcon
