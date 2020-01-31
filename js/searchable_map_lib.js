@@ -533,12 +533,12 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-	  SearchableMapLib.map.removeLayer(SearchableMapLib.centerMark);
-	  SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
-	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
-	  if (SearchableMapLib.currentPinpoint != undefined) {
-	  SearchableMapLib.selectIcon();
-	  };
+	  //SearchableMapLib.map.removeLayer(SearchableMapLib.centerMark);
+	  //SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
+	  //var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
+	  //if (SearchableMapLib.currentPinpoint != undefined) {
+	  //SearchableMapLib.selectIcon();
+	  //};
       SearchableMapLib.modalPop(e.target.feature.properties);
 //    getIcon:yellowIcon
     }
