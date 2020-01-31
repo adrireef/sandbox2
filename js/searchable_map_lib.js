@@ -533,7 +533,7 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-	  getIcon:yellowIcon;
+	  SearchableMapLib.addIcon();
       SearchableMapLib.modalPop(e.target.feature.properties);
 //    getIcon:yellowIcon
     }
