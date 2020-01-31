@@ -533,7 +533,6 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-	  SearchableMapLib.map.removeLayer(SearchableMapLib.currentPinpoint);
 	  SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
 //	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
 	  if (SearchableMapLib.currentPinpoint != undefined) {
