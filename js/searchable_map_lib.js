@@ -535,10 +535,11 @@ var SearchableMapLib = {
     function modalPop(e) {
 	  SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
 //	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
-		console.log('valore di current pinpoint:')
-          console.log(SearchableMapLib.currentPinpoint);
-	  SearchableMapLib.addIcon();
+	  SearchableMapLib.selectIcon();
       SearchableMapLib.modalPop(e.target.feature.properties);
+      if (SearchableMapLib.currentPinpoint != '') {
+              layer.removeLayer(SearchableMapLib.currentPinpoint);
+        };
 //    getIcon:yellowIcon
     }
 
@@ -555,6 +556,14 @@ var SearchableMapLib = {
 
     SearchableMapLib.map.setView(new L.LatLng( SearchableMapLib.currentPinpoint[0], SearchableMapLib.currentPinpoint[1] ), zoom)
   },
+
+  selectIcon: function() {
+    SearchableMapLib.centerMark = new L.Marker(SearchableMapLib.currentPinpoint, { icon: (new L.Icon({
+            iconUrl: 'https://adrireef.github.io/sandbox2/img/marker-icon-yellow.png',
+            iconSize: [25,41],
+            iconAnchor: [10, 32]
+    }))});
+
 
   addIcon: function() {
     SearchableMapLib.centerMark = new L.Marker(SearchableMapLib.currentPinpoint, { icon: (new L.Icon({
