@@ -533,8 +533,9 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
+	  SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[0], e.target.feature.geometry.coordinates[1]];
 //	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
-//	  SearchableMapLib.addIcon(selectedPoint);
+	  SearchableMapLib.addIcon();
       SearchableMapLib.modalPop(e.target.feature.properties);
 //    getIcon:yellowIcon
     }
