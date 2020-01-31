@@ -563,11 +563,14 @@ var SearchableMapLib = {
             iconSize: [25,41],
             iconAnchor: [10, 32]
     }))});
+    
+    SearchableMapLib.centerMark.addTo(SearchableMapLib.map);
+  },
 
 
   addIcon: function() {
     SearchableMapLib.centerMark = new L.Marker(SearchableMapLib.currentPinpoint, { icon: (new L.Icon({
-            iconUrl: 'https://adrireef.github.io/sandbox2/img/blue-pushpin.png',
+            iconUrl: '/img/blue-pushpin.png',
             iconSize: [32, 32],
             iconAnchor: [10, 32]
     }))});
