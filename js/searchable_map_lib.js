@@ -538,7 +538,7 @@ var SearchableMapLib = {
 	  SearchableMapLib.selectIcon();
       SearchableMapLib.modalPop(e.target.feature.properties);
       if (SearchableMapLib.currentPinpoint != '') {
-              layer.removeLayer(SearchableMapLib.currentPinpoint);
+              e.removeLayer(SearchableMapLib.currentPinpoint);
         };
 //    getIcon:yellowIcon
     }
