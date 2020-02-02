@@ -571,7 +571,7 @@ var SearchableMapLib = {
             iconAnchor: [10, 32]
     }))});
     
-    SearchableMapLib.centerMark.addTo(SearchableMapLib.map);
+    SearchableMapLib.selectedMark.addTo(SearchableMapLib.map);
   },
 
 
