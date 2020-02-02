@@ -537,19 +537,13 @@ var SearchableMapLib = {
 		//SearchableMapLib.selectedMark = null;
 		//SearchableMapLib.currentResultsLayer.setStyle({icon: SearchableMapLib.getIcon()}); //resets layer colors
 		SearchableMapLib.selectedPoint= [e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
-		console.log(SearchableMapLib.selectedPoint);
-		SearchableMapLib.selectedMark = new L.Marker(SearchableMapLib.selectedPoint, { icon: (new L.Icon({
-            iconUrl: 'https://adrireef.github.io/sandbox2/img/marker-icon-yellow2.png',
-            iconSize: [25,41],
-            iconAnchor: [10, 32]
-    }))}); //highlights selected
+		if (SearchableMapLib.selectedPoint != undefined) {SearchableMapLib.selectIcon();};
 		SearchableMapLib.modalPop(e.target.feature.properties);
 	}
 		
 		
 		
 	  //SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
-////	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
 	  //if (SearchableMapLib.currentPinpoint != undefined) {
 	  //SearchableMapLib.selectIcon();
 	  //};
@@ -571,7 +565,7 @@ var SearchableMapLib = {
   },
 
   selectIcon: function() {
-    SearchableMapLib.centerMark = new L.Marker(SearchableMapLib.selectedPoint, { icon: (new L.Icon({
+    SearchableMapLib.selectedMark = new L.Marker(SearchableMapLib.selectedPoint, { icon: (new L.Icon({
             iconUrl: 'https://adrireef.github.io/sandbox2/img/marker-icon-yellow2.png',
             iconSize: [25,41],
             iconAnchor: [10, 32]
