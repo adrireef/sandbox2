@@ -534,7 +534,7 @@ var SearchableMapLib = {
 
     function modalPop(e) {
 		SearchableMapLib.currentResultsLayer.setStyle({icon: SearchableMapLib.getIcon()}); //resets layer colors
-        e.target.feature.setStyle({ icon: (new L.Icon({
+        e.target.setStyle({ icon: (new L.Icon({
             iconUrl: 'https://adrireef.github.io/sandbox2/img/marker-icon-yellow2.png',
             iconSize: [25,41],
             iconAnchor: [10, 32]
