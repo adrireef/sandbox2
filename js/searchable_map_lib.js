@@ -534,21 +534,10 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-		//SearchableMapLib.currentResultsLayer.setStyle({icon: SearchableMapLib.getIcon()}); //resets layer colors
 		SearchableMapLib.selectedPoint= [e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
 		if (SearchableMapLib.selectedPoint != undefined) {SearchableMapLib.selectIcon();};
 		SearchableMapLib.modalPop(e.target.feature.properties);
 	}
-		
-		
-		
-	  //SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
-	  //if (SearchableMapLib.currentPinpoint != undefined) {
-	  //SearchableMapLib.selectIcon();
-	  //};
-      //SearchableMapLib.modalPop(e.target.feature.properties);
-    //}
-
   },
 
   setZoom: function() {
@@ -572,7 +561,6 @@ var SearchableMapLib = {
             iconSize: [25,41],
             iconAnchor: [10, 32]
     }))});
-    
     SearchableMapLib.selectedMark.addTo(SearchableMapLib.map);
   },
 
