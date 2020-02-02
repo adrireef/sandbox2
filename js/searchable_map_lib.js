@@ -19,6 +19,7 @@ var SearchableMapLib = {
   currentResults: null,
   currentResultsLayer: null,
   currentPinpoint: null,
+  selectedPoint: null, //aggiunto per evidenziazione
   lastClickedLayer: null,
 
   initialize: function(options){
@@ -534,7 +535,7 @@ var SearchableMapLib = {
 
     function modalPop(e) {
 		SearchableMapLib.currentResultsLayer.setStyle({icon: SearchableMapLib.getIcon()}); //resets layer colors
-		var SearchableMapLib.selectedPoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
+		SearchableMapLib.selectedPoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
         SearchableMapLib.selectedPoint.setStyle({ icon: (new L.Icon({
             iconUrl: 'https://adrireef.github.io/sandbox2/img/marker-icon-yellow2.png',
             iconSize: [25,41],
