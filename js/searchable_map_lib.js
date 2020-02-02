@@ -533,14 +533,24 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-//	  SearchableMapLib.map.removeLayer(SearchableMapLib.centerMark);
-	  SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
-//	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
-	  if (SearchableMapLib.currentPinpoint != undefined) {
-	  SearchableMapLib.selectIcon();
-	  };
-      SearchableMapLib.modalPop(e.target.feature.properties);
-    }
+		SearchableMapLib.currentResultsLayer.setStyle({icon: SearchableMapLib.getIcon(feature.properties["type"])}); //resets layer colors
+        e.setStyle({ icon: (new L.Icon({
+            iconUrl: 'https://adrireef.github.io/sandbox2/img/marker-icon-yellow2.png',
+            iconSize: [25,41],
+            iconAnchor: [10, 32]
+		}))}); //highlights selected
+		SearchableMapLib.modalPop(e.target.feature.properties);
+	}
+		
+		
+		
+	  //SearchableMapLib.currentPinpoint=[e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
+////	  var selectedPoint = [results[0].geometry.location.lat(), results[0].geometry.location.lng()];
+	  //if (SearchableMapLib.currentPinpoint != undefined) {
+	  //SearchableMapLib.selectIcon();
+	  //};
+      //SearchableMapLib.modalPop(e.target.feature.properties);
+    //}
 
   },
 
