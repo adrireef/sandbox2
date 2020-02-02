@@ -534,7 +534,7 @@ var SearchableMapLib = {
     }
 
     function modalPop(e) {
-		//SearchableMapLib.selectedMark = null;
+		SearchableMapLib.selectedMark = null;
 		//SearchableMapLib.currentResultsLayer.setStyle({icon: SearchableMapLib.getIcon()}); //resets layer colors
 		SearchableMapLib.selectedPoint= [e.target.feature.geometry.coordinates[1], e.target.feature.geometry.coordinates[0]];
 		if (SearchableMapLib.selectedPoint != undefined) {SearchableMapLib.selectIcon();};
