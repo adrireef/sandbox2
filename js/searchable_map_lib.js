@@ -564,7 +564,9 @@ var SearchableMapLib = {
   },
 
   selectIcon: function() {
-	SearchableMapLib.selectedMark = null;
+	if (SearchableMapLib.selectedMark != undefined) { 
+	SearchableMapLib.map.removeLayer(SearchableMapLib.selectedMark);
+	};
     SearchableMapLib.selectedMark = new L.Marker(SearchableMapLib.selectedPoint, { icon: (new L.Icon({
             iconUrl: 'https://adrireef.github.io/sandbox2/img/marker-icon-yellow2.png',
             iconSize: [25,41],
