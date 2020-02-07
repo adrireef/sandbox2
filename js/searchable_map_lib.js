@@ -368,6 +368,9 @@ var SearchableMapLib = {
     if ( $("#cbType5").is(':checked')) {
       customFilters.push('r.properties["Country"] === "Croatia"');
     }
+    if ( $("#cbType8").is(':checked')) {
+      customFilters.push('r.properties["Country"] === "International waters"');
+    }
 
     SearchableMapLib.currentResults.features = $.grep(SearchableMapLib.currentResults.features, function(r) {
         var filter = "";
