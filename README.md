@@ -1,4 +1,4 @@
-# [ADRIREEF.maps webgis](https://adrireef.github.io/sandbox2/)
+# [ADRIREEF.maps webgis](https://adrireef.github.io/sandbox3/)
 
 This page contains the [ADRIREEF](https://www.italy-croatia.eu/web/adrireef/) (innovative exploitation of Adriatic Reefs in order to strengthen blue economy) Interreg Project webgis. Data comes from a large recognition of infromation on reefs relying on the Adriatic Sea, both from Italian and Croatian coastline. Both natural and artificial reefs and wrecks are considered.
 
